@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+    <h2>Welcome, {{ name }}</h2>
+    <p>Your Balance: {{ balance }}</p>
+    <form method="POST" action="{{ url_for('deposit') }}">
+        Deposit: <input type="number" name="amount" required>
+        <input type="submit" value="Deposit">
+    </form>
+    <form method="POST" action="{{ url_for('withdraw') }}">
+        Withdraw: <input type="number" name="amount" required>
+        <input type="submit" value="Withdraw">
+    </form>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
